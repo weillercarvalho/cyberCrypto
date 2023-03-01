@@ -1,6 +1,6 @@
 # CyberCrypto
 
-A fullstack project focused in the creation of a website for NFT E-commerce designed by Shinobi and build in the FrontEnd with React, Framer Motion, SASS, React Toastify. In the BackEnd was used, NodeJS, Express, Typescript, Jest, Vitest, Docker, AWS(EC2), PostgreSQL, Prisma etc.
+A fullstack project focused in the creation of a website for NFT E-commerce designed by Shinobi and build in the FrontEnd with React, SASS, React Toastify. In the BackEnd was used, NodeJS, Express, Typescript, Jest, Vitest, Docker, AWS(EC2), PostgreSQL, Prisma etc.
 
 
 ![Screenshot from 2023-02-28 00-19-54](https://user-images.githubusercontent.com/99501431/221745560-2c42d557-c478-4d16-a4ad-02c2f431b1b4.png)
@@ -18,7 +18,7 @@ A fullstack project focused in the creation of a website for NFT E-commerce desi
   <img src="https://img.shields.io/badge/semantic%20ui%20react-35BDB2?style=for-the-badge&logo=semanticuireact&logoColor=white" alt=""/>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt=""/>
   <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt=""/>
-  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt=""/>
+  <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt=""/>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt=""/>
   <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt=""/>
   <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt=""/>
