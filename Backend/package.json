@@ -1,5 +1,5 @@
 {
-  "name": "shinobicryptobackend",
+  "name": "cybercryptobackend",
   "version": "1.0.0",
   "description": "Website for NFT E-Commerce.",
   "main": "./src/app.ts",
@@ -18,8 +18,7 @@
     "Redis"
   ],
   "author": {
-    "name": "Weiller Carvalho",
-    "designer": "Shinobi"
+    "name": "Weiller Carvalho"
   },
   "license": "ISC",
   "devDependencies": {

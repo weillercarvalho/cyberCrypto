@@ -1,9 +1,11 @@
 {
-  "name": "shinobicryptofrontend",
+  "name": "cybercryptofrontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "author": {"name": "Weiller Carvalho", "designer": "Shinobi"},
+  "author": {
+    "name": "Weiller Carvalho"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,7 +13,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "styled-reset": "^4.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
