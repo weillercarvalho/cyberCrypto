@@ -1,4 +1,4 @@
-# cryptoShinobi
+# CyberCrypto
 
 A fullstack project focused in the creation of a website for NFT E-commerce designed by Shinobi and build in the FrontEnd with React, Framer Motion, SASS, React Toastify. In the BackEnd was used, NodeJS, Express, Typescript, Jest, Vitest, Docker, AWS(EC2), PostgreSQL, Prisma etc.
 
