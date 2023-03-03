@@ -6,8 +6,8 @@ import { useState } from 'react';
 
 function App() {
   const [token, setToken] = useState("");
-  const auth = JSON.parse(localStorage.getItem(`crypto`) as any); // Operador de coalescencia nula nao surtiu efeito, nem ternario, nem verificacao com type of e nem operador de not null, sendo assim vai por bem ou por mal.
-  if (auth && token === "") {
+  const auth = JSON.parse(localStorage.getItem(`crypto`) ?? '{}'); // Operador de coalescencia nula nao surtiu efeito, nem ternario, nem verificacao com type of e nem operador de not null, sendo assim vai por bem ou por mal.
+  if (auth !== '{}' && token === "") {
     return setToken(auth);
   }
   return(
