@@ -1,83 +1,76 @@
-.signinback
-    background-color: #4158D0
-    background-image: linear-gradient(43deg, #4158D0 0%, #2b1229 46%, #000000 100%)
+@mixin firstlayout
+    .signinback
+        background-color: #4158D0
+        background-image: linear-gradient(43deg, #4158D0 0%, #2b1229 46%, #000000 100%)
 
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    background-size: cover
-    background-attachment: fixed
-    width: 100vw
-    height: 100vh
-    display: flex
-    justify-content: center
-    align-items: center
-    position: relative
-    text-align: center
+        -webkit-background-size: cover
+        -moz-background-size: cover
+        background-size: cover
+        background-attachment: fixed
+        width: 100vw
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        text-align: center
+        .principalcontainer
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        .principalform
+            display: flex
+            flex-direction: column
+        .inputs
+            background-color: #fff
+            border-radius: 10px
+            width: 450px
+            margin: 5px 5px 5px 5px !important
+        .signinname
+            color: #ffffff
+            font-size: 60px
+            margin: 0 50px 0 10px
+        .nav1
+            display: flex
+            margin-bottom: 100px
+        .img1
+            width: 70px
+            height: 70px
+            animation: rotation 6s infinite linear
+            @keyframes rotation
+                from
+                    transform: rotate(0deg)
+                to
+                    transform: rotate(360deg)    
+        .form1
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        .button1  
+            background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)
+            margin: 40px 20px 20px 20px
+            padding: 15px 45px
+            text-align: center
+            text-transform: uppercase
+            transition: 0.5s
+            background-size: 200% auto
+            color: white         
+            box-shadow: 0 0 20px #eee
+            border-radius: 10px
+            display: block
+            width: 200px
+            &:hover
+                cursor: pointer
+                background-position: right center
+                color: #fff
+                text-decoration: none
+        .h11
+            color: #aaa3a3
+            margin-top: 15px
+            &:hover
+                cursor: pointer
 
-.principalcontainer
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-
-.principalform
-    display: flex
-    flex-direction: column
-
-.inputs
-    background-color: #fff
-    border-radius: 10px
-    width: 450px
-    margin: 5px 5px 5px 5px !important
 
 
-.signinname
-    color: #ffffff
-    font-size: 60px
-    margin: 0 50px 0 10px
-
-.nav1
-    display: flex
-    margin-bottom: 100px
-
-.img1
-    width: 70px
-    height: 70px
-    animation: rotation 6s infinite linear
-    @keyframes rotation
-        from
-            transform: rotate(0deg)
-        to
-            transform: rotate(360deg)    
-.form1
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-.button1  
-    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)
-    margin: 40px 20px 20px 20px
-    padding: 15px 45px
-    text-align: center
-    text-transform: uppercase
-    transition: 0.5s
-    background-size: 200% auto
-    color: white         
-    box-shadow: 0 0 20px #eee
-    border-radius: 10px
-    display: block
-    width: 200px
-    &:hover
-        cursor: pointer
-        background-position: right center
-        color: #fff
-        text-decoration: none
-.h11
-    color: #aaa3a3
-    margin-top: 15px
-    &:hover
-        cursor: pointer
-    
-
-     
-         
