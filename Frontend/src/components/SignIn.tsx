@@ -10,7 +10,7 @@ export default function SignIn() {
   const { token } = useContext(userContext) as ContextUserToken;
   const navigate = useNavigate();
   useEffect(() => {
-    if (token) {
+    if (typeof token === 'string') {
       navigate("/dashboard")
     }
   }, []);

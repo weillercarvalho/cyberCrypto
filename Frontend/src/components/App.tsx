@@ -7,9 +7,9 @@ import { userContext } from "./Context";
 import Dashboard from "./Dashboard";
 
 function App() {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(undefined);
   const auth = JSON.parse(localStorage.getItem(`crypto`) ?? "{}");
-  if (auth !== "{}" && token === "") {
+  if (auth !== "{}" && token === undefined) {
     return setToken(auth);
   }
   return (
