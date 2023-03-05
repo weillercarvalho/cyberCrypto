@@ -7,25 +7,47 @@ import { useContext } from "react";
 import { userContext } from "./Context";
 import { ContextUserToken } from "./Models";
 import { typeSignIn } from "./Models";
+import { signin } from "../services/Services";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export default function SignIn() {
   const { token } = useContext(userContext) as ContextUserToken;
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   useEffect(() => {
     if (typeof token === 'string') {
       navigate("/dashboard")
     }
   }, []);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (password.length === 0 || email.length === 0) {
-      return;
+    if (password.length < 4) {
+      return (toast.warn('Password too short!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        }))
     }
     const body: typeSignIn = {
       password: password,
       email: email
     }
+    signin(body).then(r => {
+      console.info(r);
+      setEmail("");
+      setPassword("");
+      navigate("/dashboard")
+    }).catch(r => {
+      console.error(r);
+    })
   }
   return (
     <div className="signinback">
@@ -61,6 +83,7 @@ export default function SignIn() {
           <button className="button1">SIGN IN</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
