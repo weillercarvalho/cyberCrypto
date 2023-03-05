@@ -5,7 +5,8 @@ import image from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { userContext } from "./Context";
-import { ContextUserToken } from "./Context";
+import { ContextUserToken } from "./Models";
+import { typeSignIn } from "./Models";
 export default function SignIn() {
   const { token } = useContext(userContext) as ContextUserToken;
   const navigate = useNavigate();
@@ -20,6 +21,10 @@ export default function SignIn() {
     e.preventDefault();
     if (password.length === 0 || email.length === 0) {
       return;
+    }
+    const body: typeSignIn = {
+      password: password,
+      email: email
     }
   }
   return (
