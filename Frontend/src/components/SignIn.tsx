@@ -1,4 +1,4 @@
-import "../styles/css/style.min.css";
+
 import { TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import image from "../assets/logo.png";

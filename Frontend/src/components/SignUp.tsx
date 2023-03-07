@@ -1,4 +1,3 @@
-import "../styles/css/style.min.css";
 import { TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import image from "../assets/logo.png";
@@ -16,6 +15,7 @@ export default function SignUp() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [imageurl, setImageurl] = useState("");
   const [btc, setBtc] = useState("");
   useEffect(() => {
     if (typeof token === "string") {
@@ -37,38 +37,40 @@ export default function SignUp() {
       });
     }
     if (btc === "") {
-        const body: typeSignIn = {
-            password: password,
-            email: email,
-          };
-          signin(body)
-            .then((r) => {
-              console.info(r);
-              setEmail("");
-              setPassword("");
-              navigate("/signin");
-            })
-            .catch((r) => {
-              console.error(r);
-            });
+      const body: typeSignIn = {
+        password: password,
+        email: email,
+        image: imageurl
+      };
+      signin(body)
+        .then((r) => {
+          console.info(r);
+          setEmail("");
+          setPassword("");
+          navigate("/signin");
+        })
+        .catch((r) => {
+          console.error(r);
+        });
     }
     if (btc !== "") {
-        const body: typeSignIn = {
-            password: password,
-            email: email,
-            btc: btc
-          };
-          signin(body)
-            .then((r) => {
-              console.info(r);
-              setEmail("");
-              setPassword("");
-              setBtc("");
-              navigate("/signin");
-            })
-            .catch((r) => {
-              console.error(r);
-            });
+      const body: typeSignIn = {
+        password: password,
+        email: email,
+        image: imageurl,
+        btc: btc,
+      };
+      signin(body)
+        .then((r) => {
+          console.info(r);
+          setEmail("");
+          setPassword("");
+          setBtc("");
+          navigate("/signin");
+        })
+        .catch((r) => {
+          console.error(r);
+        });
     }
   }
   return (
@@ -107,6 +109,16 @@ export default function SignUp() {
             variant="filled"
             value={btc}
             onChange={(e) => setBtc(e.target.value)}
+          />
+          <TextField
+            type="text"
+            className="inputs"
+            id="filled-basic"
+            label="Image URL"
+            variant="filled"
+            value={imageurl}
+            onChange={(e) => setImageurl(e.target.value)}
+            required
           />
           <h1 onClick={() => navigate("/signin")} className="h11">
             Already have an account?

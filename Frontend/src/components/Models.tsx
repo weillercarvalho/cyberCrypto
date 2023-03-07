@@ -9,5 +9,6 @@ export interface ContextUserSetToken {
 export type typeSignIn = {
     email: string
     password: string
+    image: string
     btc?: string
 }
