@@ -12,3 +12,7 @@ export type typeSignIn = {
     image: string
     btc?: string
 }
+
+export interface TitleProps {
+    children?: React.ReactNode;
+  }
