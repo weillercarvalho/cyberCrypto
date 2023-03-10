@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { userContext } from "./Context";
 import { ContextUserToken } from "./Models";
-import { typeSignIn } from "./Models";
+import { typeSignUp } from "./Models";
 import { signin } from "../services/Services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,7 +37,7 @@ export default function SignUp() {
       });
     }
     if (btc === "") {
-      const body: typeSignIn = {
+      const body: typeSignUp = {
         password: password,
         email: email,
         image: imageurl
@@ -54,7 +54,7 @@ export default function SignUp() {
         });
     }
     if (btc !== "") {
-      const body: typeSignIn = {
+      const body: typeSignUp = {
         password: password,
         email: email,
         image: imageurl,
