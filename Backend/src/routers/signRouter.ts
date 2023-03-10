@@ -1,12 +1,15 @@
 import express from "express";
-import { signInController, signUpController } from "../controllers/signController.js";
-
+import {
+  signInController,
+  signUpController,
+} from "../controllers/signController.js";
+import { signUpMiddleware } from "../middlewares/authenticationMiddleware.js";
 
 const signRouter = express.Router();
 
-//Puxar middleware de autenticacao.
 
-signRouter.post("/signin", signInController)
-signRouter.post("/signup", signUpController)
 
-export default signRouter
+signRouter.post("/signin", signInController);
+signRouter.post("/signup", signUpMiddleware, signUpController);
+
+export default signRouter;

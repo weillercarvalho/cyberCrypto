@@ -1,6 +1,7 @@
 import axios from "axios";
+import { typeSignUp } from "../components/Models";
 
-const BASE_URL = `localhost:5000`;
+const BASE_URL = `http://localhost:5000`;
 
 function header() {
   const auth = JSON.parse(localStorage.getItem(`crypto`) ?? "{}");
@@ -21,8 +22,9 @@ function signin(body: object) {
   return promise;
 }
 
-function signup(body: object) {
+function signup(body: typeSignUp) {
   const promise = axios.post(`${BASE_URL}/api/signup`, body);
+  return promise;
 }
 
 function dashboard() {

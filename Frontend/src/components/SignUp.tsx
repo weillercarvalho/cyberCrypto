@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { userContext } from "./Context";
 import { ContextUserToken } from "./Models";
 import { typeSignUp } from "./Models";
-import { signin } from "../services/Services";
+import { signup } from "../services/Services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,6 +24,7 @@ export default function SignUp() {
   }, []);
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     if (password.length < 4) {
       return toast.warn("Password too short!", {
         position: "top-right",
@@ -42,7 +43,7 @@ export default function SignUp() {
         email: email,
         image: imageurl
       };
-      signin(body)
+      signup(body)
         .then((r) => {
           console.info(r);
           setEmail("");
@@ -60,7 +61,8 @@ export default function SignUp() {
         image: imageurl,
         btc: btc,
       };
-      signin(body)
+      console.log(body)
+      signup(body)
         .then((r) => {
           console.info(r);
           setEmail("");
@@ -69,7 +71,7 @@ export default function SignUp() {
           navigate("/signin");
         })
         .catch((r) => {
-          console.error(r);
+          console.error(r.data);
         });
     }
   }
