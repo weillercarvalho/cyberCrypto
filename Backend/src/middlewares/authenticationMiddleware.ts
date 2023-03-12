@@ -34,7 +34,7 @@ export async function signUpMiddleware(
     signUpSchema.parse(data);
     next();
   } catch (error) {
-    throw new Error("message:", { cause: error });
+    return res.status(400).send(error);
   }
 }
 
@@ -57,6 +57,6 @@ export async function signInMiddleware(
     signInSchema.parse(data);
     next();
   } catch (error) {
-    throw new Error("message:", { cause: error });
+    return res.status(400).send(error);
   }
 }

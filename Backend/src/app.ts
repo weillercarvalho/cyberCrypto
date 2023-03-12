@@ -20,3 +20,5 @@ server.use("/api",withdrawRouter)
 server.listen(process.env.PORT || 5000, () => {
     console.log(`Listening on the ${process.env.PORT} port`)
 })
+
+export default server;
