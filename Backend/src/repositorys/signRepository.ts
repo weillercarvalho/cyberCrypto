@@ -1,12 +1,12 @@
 import prisma from "../database/db.js";
-import { typeSignUp } from "../models/allModels.js";
+import { typeSignUp, typeSignInWithId } from "../models/allModels.js";
 export async function signUpPost({ email, password, image, btc }: typeSignUp) {
   return await prisma.users.create({
     data: {
-      email: email,
-      password: password,
+      email,
+      password,
       imageurl: image,
-      btcaddress: btc
+      btcaddress: btc,
     },
   });
 }
@@ -14,7 +14,17 @@ export async function signUpPost({ email, password, image, btc }: typeSignUp) {
 export async function hashVerification(email: string) {
   return await prisma.users.findFirst({
     where: {
-      email
-    }
-  })
+      email,
+    },
+  });
+}
+
+export async function signInPost({ email, userId, token }: typeSignInWithId) {
+  return await prisma.sessions.create({
+    data: {
+      email,
+      userId,
+      token,
+    },
+  });
 }

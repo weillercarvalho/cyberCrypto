@@ -1,6 +1,7 @@
 import { typeSignUp, typeSignIn } from "../models/allModels.js";
-import { signUpPost, hashVerification } from "../repositorys/signRepository.js";
+import { signUpPost, hashVerification, signInPost } from "../repositorys/signRepository.js";
 import bcrypt from "bcrypt";
+import { v4 as uuidv4 } from "uuid";
 
 export async function signUpService({
   email,
@@ -28,4 +29,7 @@ export async function signInService({ email, password }: typeSignIn) {
   if (!comparePassword) {
     throw new Error("Wrong password!");
   }
+  const token = uuidv4();
+  await signInPost({email, userId: getHashed.id, token});
+  return token;
 }
