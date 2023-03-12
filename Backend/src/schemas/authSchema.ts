@@ -7,6 +7,12 @@ const signUpSchema = z.object({
   btc: z.string(),
 });
 
-export type signUpTypeSchema = z.infer<typeof signUpSchema>;
+const signInSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(4),
+});
 
-export { signUpSchema };
+export type signUpTypeSchema = z.infer<typeof signUpSchema>;
+export type signInTypeSchema = z.infer<typeof signInSchema>;
+
+export { signUpSchema, signInSchema };

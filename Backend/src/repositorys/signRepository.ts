@@ -10,3 +10,11 @@ export async function signUpPost({ email, password, image, btc }: typeSignUp) {
     },
   });
 }
+
+export async function hashVerification(email: string) {
+  return await prisma.users.findFirst({
+    where: {
+      email
+    }
+  })
+}
