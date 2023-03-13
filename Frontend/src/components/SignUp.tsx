@@ -61,7 +61,6 @@ export default function SignUp() {
         image: imageurl,
         btc: btc,
       };
-      console.log(body)
       signup(body)
         .then((r) => {
           console.info(r);
