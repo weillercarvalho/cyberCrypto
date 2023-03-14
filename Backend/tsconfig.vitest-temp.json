@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "removeComments": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "tsBuildInfoFile": "/home/weiller/Documents/Driven/POCs/Crypto/Backend/node_modules/vitest/dist/tsconfig.tmp.tsbuildinfo"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "exclude": [
+    "./dist"
+  ]
+}
